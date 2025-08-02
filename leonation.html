@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LEONATION Rank</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #00bfff;
+      text-align: center;
+      margin-bottom: 40px; /* Diperbesar jaraknya */
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    li {
+      padding: 8px 0;
+      border-bottom: 1px solid #444;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+      background-color: white;
+      color: black;
+      box-sizing: border-box;
+    }
+
+    .wa-button {
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      padding: 16px 0;
+      font-size: 17px;
+      font-weight: bold;
+      color: white;
+      background-color: #25D366;
+      border: none;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .wa-button:hover {
+      background-color: #1ebe5d;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 750px;
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LEONATION</h1>
+
+    <h2>HARGA RANK SERVER</h2>
+    <ul>
+      <li>SUPPORTER = 5.000 RIBU</li>
+      <li>VIP = 10.000 RIBU</li>
+      <li>MVP = 20.000 RIBU</li>
+      <li>ELITE = 30.000 RIBU</li>
+      <li>MASTER = 40.000 RIBU</li>
+      <li>LEGENDS = 50.000 RIBU</li>
+      <li>MYTHIC = 60.000 RIBU</li>
+      <li>ULTRA = 70.000 RIBU</li>
+      <li>VENOM = 80.000 RIBU</li>
+      <li>IMMORTAL = 90.000 RIBU</li>
+      <li>MICHAEL = 100.000 RIBU</li>
+    </ul>
+    <p style="text-align: center;"><strong>RANK BAYAR PERBULAN / 30 HARI 1×</strong></p>
+
+    <label for="playerName">Nama Player Minecraft:</label>
+    <input type="text" id="playerName" placeholder="Contoh: Steve_MC123" />
+
+    <label for="rank">Pilih Rank:</label>
+    <select id="rank">
+      <option value="SUPPORTER - 5.000 RIBU">SUPPORTER - 5.000 RIBU</option>
+      <option value="VIP - 10.000 RIBU">VIP - 10.000 RIBU</option>
+      <option value="MVP - 20.000 RIBU">MVP - 20.000 RIBU</option>
+      <option value="ELITE - 30.000 RIBU">ELITE - 30.000 RIBU</option>
+      <option value="MASTER - 40.000 RIBU">MASTER - 40.000 RIBU</option>
+      <option value="LEGENDS - 50.000 RIBU">LEGENDS - 50.000 RIBU</option>
+      <option value="MYTHIC - 60.000 RIBU">MYTHIC - 60.000 RIBU</option>
+      <option value="ULTRA - 70.000 RIBU">ULTRA - 70.000 RIBU</option>
+      <option value="VENOM - 80.000 RIBU">VENOM - 80.000 RIBU</option>
+      <option value="IMMORTAL - 90.000 RIBU">IMMORTAL - 90.000 RIBU</option>
+      <option value="MICHAEL - 100.000 RIBU">MICHAEL - 100.000 RIBU</option>
+    </select>
+
+    <a class="wa-button" href="#" onclick="sendWA()">Beli via WhatsApp</a>
+  </div>
+
+  <script>
+    function sendWA() {
+      const name = document.getElementById('playerName').value;
+      const rank = document.getElementById('rank').value;
+
+      if (!name) {
+        alert("Masukkan nama player dulu ya.");
+        return;
+      }
+
+      const message = `Halo Admin, saya ingin membeli rank:\n\nRank: ${rank}\nNama Player: ${name}`;
+      const encoded = encodeURIComponent(message);
+      const phone = "6285189826843";
+
+      window.open(`https://wa.me/${phone}?text=${encoded}`, "_blank");
+    }
+  </script>
+</body>
+</html>
